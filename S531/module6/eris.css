@@ -1,0 +1,147 @@
+body {
+	font-family: Arial;
+}
+
+.firstimg {
+	max-width: 100%;
+	float: right;
+	padding-bottom: 10px;
+}
+
+.secondimg {
+	max-width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #555;
+}
+
+header {
+	grid-area: header;
+	background-color: #785b54;
+	padding: 10px;
+	color: #ddcdc9;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #c0c0c0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+a {
+	display: block;
+	color: #9a756c;
+	text-align: center;
+	text-decoration: none;
+	padding: 16px;
+}
+
+
+a:hover {
+	color: #ddcdc9;
+	background-color: #737373;
+}
+
+main {
+	grid-area: main;
+	background-color: #ddcdc9;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h2.main {
+	color: #4c5b4b;
+}
+
+.aside1 {
+	grid-area: aside1;
+	background-color: #c4a7a1;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+
+.aside2 {
+	grid-area: aside2;
+	background-color: #c4a7a1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #afb6af;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2.footer {
+	color: #dfdfdf;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'nav nav nav nav nav aside1'
+		'header header header header header aside1'
+		'aside2 main main main main aside1'
+		'aside2 main main main main aside1'
+		'aside2 footer footer footer footer footer';
+	grid-gap: .5em;
+	padding: .5em;
+	
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		background: #f1f1f1;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-areas: 
+			'nav nav nav nav nav nav'
+			'header header header header header header'
+			'main main main main aside1 aside1'
+			'aside2 aside2 footer footer footer footer';
+		grid-gap: .5em;
+		padding: .5em;
+	}
+	
+	.aside2 {
+		background: #f1f1f1;
+	}
+	
+	@media only screen and (max-width: 600px) {
+		body {
+			background: #606060;
+		}
+		
+		.secondimg {
+			display: none;
+		}
+		
+		.aside2 {
+			background: #606060;
+		}
+	}
+	
+}
+

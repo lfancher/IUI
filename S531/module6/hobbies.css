@@ -1,0 +1,137 @@
+body {
+	font-family: Arial;
+}
+
+.firstimg {
+	max-width: 100%;
+	float: right;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.secondimg {
+	max-width: 100%;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+header {
+	grid-area: header;
+	background-color: #d7dad7;
+	color: #394938;
+	text-align: center;
+	padding-top: 2px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #c0c0c0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+a {
+	display: block;
+	color: #443430;
+	text-decoration: none;
+	padding: 2px;
+	padding-right: 10px;
+}
+
+
+a:hover {
+	color: #ac8279;
+
+}
+
+main {
+	grid-area: main;
+	background-color: #ddcdc9;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h2.main {
+	color: #785b54;
+}
+
+
+
+aside {
+	grid-area: aside;
+	background-color: #889187;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #afb6af;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+audio {
+	width: 25%;
+	min-width: 300px;
+	float: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+h2.footer {
+	color: #dfdfdf;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header header header header header nav'
+		'aside main main main main main'
+		'aside main main main main main'
+		'aside main main main main main'
+		'aside footer footer footer footer footer';
+	
+}
+
+@media only screen and (max-width: 900px) {
+	
+	.grid-container {
+		display: grid;
+		grid-template-areas: 
+		'header header header header nav nav'
+		'main main main main main main'
+		'main main main main main main'
+		'aside aside aside aside aside aside'
+		'footer footer footer footer footer footer';
+	}
+	
+	
+	}
+
+@media only screen and (max-width: 600px) {
+		.grid-container {
+		display: grid;
+		grid-template-areas: 
+		'header header header header nav nav'
+		'main main main main main main'
+		'main main main main main main'
+		'aside aside aside aside aside aside'
+		'footer footer footer footer footer footer';
+	}
+		
+		.firstimg {
+			display: none;
+		}
+		
+		
+	}
+	
